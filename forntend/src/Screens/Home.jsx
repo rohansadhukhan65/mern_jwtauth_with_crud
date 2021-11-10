@@ -10,7 +10,7 @@ const Home = () => {
         <div className="container">
             <div className='row'>
                 <div className="col-4">
-                    <RenderTableCrud/>
+                    <RenderTableCrud  />
                 </div>
                 <div className="col-8">
                     <AddFormCrud />
