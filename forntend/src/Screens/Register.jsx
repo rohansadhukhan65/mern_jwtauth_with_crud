@@ -1,9 +1,19 @@
 import React from 'react'
+import {useSelector, useDispatch} from 'react-redux'
 
+// iport redux actions
+import {UserRegister} from '../actions/userActions';
 const Register = () => {
+    const registerResult = useSelector((s)=> s.registrationReducer);
+    const dispatch = useDispatch();
+    let registerDetails = {
+        name : "Rohan Sadhukhan",
+        email:"sadhukhanrohan15@gmail.com", 
+        pwd:"123456"
+    }
     return (
         <div className='login p-4 rounded-3 sha'>
-            <h1 className='text-center fw-light'>Register</h1>
+            <h1 className='text-center fw-light'>Register{registerResult.name}</h1>
 
             <div className='my-5'>
                 
@@ -20,7 +30,7 @@ const Register = () => {
                     <input type="text" className="form-control" id="pwd" placeholder="Enter Password..." />
                 </div>
                 <div className="text-center">
-                    <button className="btn btn-light my-3 w-50  shadow" style={{ borderRadius: '14px' }}>Register</button>
+                    <button onClick={()=>{dispatch(UserRegister(registerDetails))}} className="btn btn-light my-3 w-50  shadow" style={{ borderRadius: '14px' }}>Register</button>
                 </div>
             </div>
 
