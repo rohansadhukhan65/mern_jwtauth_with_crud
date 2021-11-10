@@ -12,10 +12,10 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav px-3 ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/Login">Login</Link>
+                                <Link className="nav-link" to="/register"><i class="fas fa-user me-2"></i> Register</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/register">Register</Link>
+                                <Link className="nav-link active" aria-current="page" to="/"><i className="fas fa-sign-in-alt me-2"/> Login</Link>
                             </li>
                         </ul>
                     </div>
