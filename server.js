@@ -15,7 +15,7 @@ app.use(express.json()) // enable application to fetch value from req.body
 
 // Load Routs here ...
 import userRouter from './routes/userRoutes.js' // we import user routes
-app.use('/api/', userRouter) //we use user routes
+app.use('/api', userRouter) //we use user routes
 
 app.get('/' , (req , res)=>{
     res.send({})

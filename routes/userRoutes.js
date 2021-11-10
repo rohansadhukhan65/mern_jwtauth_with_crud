@@ -12,7 +12,8 @@ import {
 
 
 // Define Routes Here ...
-router.route('/registerUser').post(registerController).get(registerController)
+router.route('/registerUser').post(registerController)
+router.route('/login').post(loginController)
 
 
 export default router
