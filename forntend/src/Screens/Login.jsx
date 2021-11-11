@@ -3,15 +3,14 @@ import {useSelector, useDispatch} from 'react-redux'
 
 
 // import actions
-import {UserLogin} from '../actions/userActions';
+import {userLogin} from '../redux/actions/userActions';
 
 const Login = () => {
-    const loginResult = useSelector((s) => s.loginReducer)
-    const dispatch = useDispatch()
+    
     let userDetails = {name : "Rohan Sadhukhan", pwd:"123456"}
     return (
         <div className='login p-4 rounded-3 sha'>
-            <h1 className='text-center fw-light'>Login {loginResult.name}</h1>
+            <h1 className='text-center fw-light'>Login </h1>
 
             <div className='my-5'>
                 <div className="mb-3">
@@ -23,7 +22,7 @@ const Login = () => {
                     <input type="text" className="form-control" id="pwd" placeholder="Enter Password..." />
                 </div>
                 <div className="text-center">
-                    <button onClick={()=>{dispatch(UserLogin(userDetails))}} className="btn btn-light my-3 w-50  shadow" style={{ borderRadius: '14px' }}>Login</button>
+                    <button  className="btn btn-light my-3 w-50  shadow" style={{ borderRadius: '14px' }}>Login</button>
                 </div>
             </div>
 
